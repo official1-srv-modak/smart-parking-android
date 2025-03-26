@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF6E9"
+    android:padding="16dp">
+
+    <!-- Parking Spots Grid -->
+    <GridLayout
+        android:id="@+id/parkingSpotsGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="4"
+        android:alignmentMode="alignMargins"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp">
+
+        <!-- Spot Indicators -->
+        <!-- Row 1 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#4CAF50"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#F44336"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#4CAF50"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#F44336"
+            android:layout_margin="8dp" />
+
+        <!-- Row 2 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#4CAF50"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#4CAF50"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#F44336"
+            android:layout_margin="8dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:background="#F44336"
+            android:layout_margin="8dp" />
+    </GridLayout>
+
+    <!-- Spot Number Dropdown -->
+    <LinearLayout
+        android:id="@+id/spotNumberContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/parkingSpotsGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spot No"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerSpotNo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="#FFF6E9"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Vehicle Dropdown -->
+    <LinearLayout
+        android:id="@+id/vehicleDropdownContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/spotNumberContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerVehicle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="#FFF6E9"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Duration Dropdown -->
+    <LinearLayout
+        android:id="@+id/durationDropdownContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/vehicleDropdownContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDuration"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="#FFF6E9"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Payment Section -->
+    <LinearLayout
+        android:id="@+id/paymentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/durationDropdownContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/btnMakePayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make Payment"
+            android:backgroundTint="#4C90F5"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:paddingHorizontal="16dp" />
+    </LinearLayout>
+
+    <!-- Navigation Buttons -->
+    <LinearLayout
+        android:id="@+id/navigationButtonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/paymentContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#4C90F5"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_marginEnd="16dp"
+            android:paddingHorizontal="24dp" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:backgroundTint="#4C90F5"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:paddingHorizontal="24dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

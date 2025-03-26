@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314038961054",
+    "project_id": "test-guru-60d7b",
+    "storage_bucket": "test-guru-60d7b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314038961054:android:114d9ec5394fb8d6688c8f",
+        "android_client_info": {
+          "package_name": "com.example.smartparkingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjTPY3_aSfY51zT3wcwF2SHhxhdsiQiho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
