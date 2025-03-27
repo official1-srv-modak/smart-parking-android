@@ -21,14 +21,7 @@ public class CarDetailsActivity extends AppCompatActivity {
             }
         });
 
-        //back button to return to the previous activity
-        Button backButton = findViewById(R.id.btnBack);
-        backButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                finish();
-            }
-        });
+
     }
 }
 
