@@ -25,7 +25,7 @@ public class PaymentActivity extends AppCompatActivity {
                 Toast.makeText(PaymentActivity.this, "Payment Successful with " + selectedMethod, Toast.LENGTH_SHORT).show();
 
                 // Navigate to the next screen or finish
-                Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+                Intent intent = new Intent(PaymentActivity.this, CarDetailsActivity.class);
                 startActivity(intent);
                 finish();
             }
